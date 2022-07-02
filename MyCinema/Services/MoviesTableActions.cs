@@ -39,7 +39,8 @@ namespace MyCinema.Services
                             Description = (string)reader[2],
                             Duration = (TimeSpan)reader[3],
                             Thumbnail = (string)reader[4],
-                            Price = (float)reader[5]
+                            Price = (float)reader[5],
+                            Genre = (string)reader[6]
                         });
                     }
                 }
