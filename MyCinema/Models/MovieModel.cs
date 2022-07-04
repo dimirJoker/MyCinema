@@ -5,6 +5,7 @@ namespace MyCinema.Models
 {
     public class MovieModel
     {
+        [MaxLength(10)]
         public uint Id { get; set; }
 
         [Required]
@@ -21,7 +22,7 @@ namespace MyCinema.Models
         public string Thumbnail { get; set; }
 
         [DataType(DataType.Currency)]
-        [Range(0, uint.MaxValue)]
+        [Range(0, float.MaxValue)]
         public float Price { get; set; }
 
 		[DataType(DataType.Text)]

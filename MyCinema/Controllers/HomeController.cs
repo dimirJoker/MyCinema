@@ -22,6 +22,13 @@ namespace MyCinema.Controllers
             return View(tableAction.GetAllMovies());
         }
 
+        public IActionResult Details(uint id)
+        {
+            MoviesTableActions tableAction = new();
+
+            return View(tableAction.GetMovieById(id));
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
