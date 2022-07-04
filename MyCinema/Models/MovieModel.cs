@@ -12,13 +12,13 @@ namespace MyCinema.Models
         public string Name { get; set; }
 
         [DataType(DataType.Text)]
-        public string? Description { get; set; }
+        public string Description { get; set; }
 
         [DataType(DataType.Duration)]
-        public TimeSpan? Duration { get; set; }
+        public TimeSpan Duration { get; set; }
 
         [DataType(DataType.ImageUrl)]
-        public string? Thumbnail { get; set; }
+        public string Thumbnail { get; set; }
 
         [DataType(DataType.Currency)]
         [Range(0, uint.MaxValue)]
