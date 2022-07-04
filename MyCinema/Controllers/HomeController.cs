@@ -19,8 +19,7 @@ namespace MyCinema.Controllers
         {
             MoviesTableActions tableAction = new();
 
-            //return View(tableAction.GetAllMovies());
-            return View();
+            return View(tableAction.GetAllMovies());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
