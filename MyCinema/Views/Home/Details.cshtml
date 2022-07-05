@@ -1,6 +1,6 @@
 ﻿@model MyCinema.Models.MovieModel
 
-@*<div>
+@*<div> FOR DEBUGGING
 	<h4>@Model.Name</h4>
 	<hr />
 	<dl class="row">
@@ -47,6 +47,28 @@
 	<a asp-action="Index">Back to List</a>
 </div>*@
 <div class="text-center">
-	<h1 class="display-4">@Model.Name</h1><small>@Model.Genre</small>
+	<h1 class="display-4">@Model.Name</h1><small>@Model.Genre, @Model.Duration</small>
 	<hr>
+</div>
+<div class="custom-flex-box bg-light">
+	<div class="custom-flex-item">
+		<img class="custom-flex-item-img" src="@Model.Thumbnail" alt="@Model.Name">
+	</div>
+	<div class="custom-flex-item">
+		<strong>Описание:</strong>
+		<p>@Model.Description</p>
+		<div id="">
+			<div class="screen">
+				<div class="caption">екран</div>
+			</div> @*ЭКРАН*@
+			<div id="hall-scheme-legend">
+				<ul>
+					<li>
+						<div class="seat seat-color2"></div>
+						$@Model.Price
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </div>
