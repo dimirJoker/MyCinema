@@ -205,7 +205,7 @@ user agent stylesheet li {
 }
 
 .seat-color2 {
-    background-color: #56E369;
+    background-color: #56E369 !important;
     outline: none;
 }
 
@@ -219,7 +219,6 @@ user agent stylesheet li {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     cursor: default;
-    color: transparent;
     outline: 1px solid #aaa;
     outline-offset: -1px;
     line-height: 16px;
@@ -233,3 +232,28 @@ user agent stylesheet div {
     white-space: nowrap;
 }
 /*////////////////////////////////////////////////////////////////////*/
+.wrapper {
+    overflow: hidden;
+    height: 380px;
+    display: block;
+    position: relative;
+    width: 640px;
+}
+
+#hall-scheme-container {
+    display: inline-block;
+    width: 620px;
+    height: 380px;
+    overflow: hidden;
+    z-index: 50;
+    margin-left: 10px;
+}
+
+.seat-occupied, #hall-scheme .seat-occupied:hover {
+    background-image: url(https://bilet.vkino.com.ua/i/scheme/seat-occupied.png);
+    background-color: white !important;
+    background-repeat: no-repeat;
+    color: transparent;
+    background-position: center, center;
+    outline: none;
+}
