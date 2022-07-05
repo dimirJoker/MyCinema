@@ -46,6 +46,7 @@
 	@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
 	<a asp-action="Index">Back to List</a>
 </div>*@
-<aside>
-	<img src="@Model.Thumbnail" alt="@Model.Name" style="width:328px">
-</aside>
+<div class="text-center">
+	<h1 class="display-4">@Model.Name</h1><small>@Model.Genre</small>
+	<hr>
+</div>
