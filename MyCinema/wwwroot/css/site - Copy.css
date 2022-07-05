@@ -110,7 +110,7 @@ img {
 }
 
 .custom-flex-item {
-    padding: 0 15px;
+    padding: 15px;
 }
 
 .custom-flex-item-img {
@@ -120,10 +120,6 @@ img {
     border: 1px solid rgba(0,0,0,.125);
 }
 /*////////////////////////////////////////////////////////////////////*/
-user agent stylesheet div {
-    display: block;
-}
-
 #hall-scheme {
     display: inline-block;
     -webkit-touch-callout: none;
@@ -136,27 +132,86 @@ user agent stylesheet div {
     float: left;
 }
 
+user agent stylesheet div {
+    display: block;
+}
+
 .screen {
     text-align: center;
     height: 32px;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAksAAAAQCAYAAAAGazsfAAAACXBIWXMAAAsSAAALEgHS3X78AAACpklEQVR4nO2cwVHDMBBFxQx36AA6IEfrBCXQEZRCCZSQnJRj6CB0ABWEMWMYMLsrWTGxLL83w0VxEhPb0tPX2meHw8EBAGxDuHbOXR/xQ9wV9iPuu78c3hrvd9PuPgCUArIEcEK2Iaycc5fGN6YIS/v+VcJet9vdcHxPwksrWAlftB5hm33jfa4EAkAGyBIskoi0WK/FZOaWMwomxhK3tt1KzHbGe3eN9ylCCFAdyBIUwzYEKzHRlngseWk/64IjnMx7ZCCNYQ20UxBL8Szac+qqoP+ldDbK/llypp0vLIFCcSBLkIyRxgxtX/JA9JpQRzPGUs0njfdJ20E+Ecn/Scp2KdssOb3UpEw7zzUhIyWDQSBLlWEIjZTMaKnMEhIZS1qswuDYMgb1JDAp2xCsQntLxmKitgRJGyJjWl+AiFUIsjQRitRonZW2bY3Fu1pnZS3xaLNKxAXgn4kka9YyuSZ1tU7WpL5Nm5hJfRr92YQgSwkoYiN1AlqnUcuMTEtjtAtea6cmAQAGYUjZ0FrH2iaakoRJk0upP6YvTqQ6WTIuKOmikdrmLjaa0GjJjBgvcwEBwJLIkDGt5KGGyXGqgIlSVmMCVoQsKclN7XKj3Xkkxq+SAFG8CwBQPoaIDS3HmOvypDSJl8Y1sa0E+cqWJaGIUDrA0lLVHA+4dKC14j5JYCj4AwCAUTGeui8FC1o5yRzvTJbG5KTkKzdk+CVLnQDdC9IzN8GRHsq26AgRAAAgxgilLHPzBWmVp3WAdeP901dDX5YenXMPp9zLjmxLJLUBAAAoF6XUZkjbFPK1abz/lsHz3otDpENKb/rxlrRURfEwAADAQlDG/Oya2yPqnLPvhOzL0nP3YX+kB8EBAACAqRlTvpS6r1V/tYvnLAEAAABoOOc+AMfwFPCvETNoAAAAAElFTkSuQmCC) center 0 no-repeat;
 }
 
-    .screen .caption {
-        text-transform: uppercase;
-        color: #a1a1a1;
-        height: 14px;
-        font-size: 14px;
-        display: inline-block;
-        padding: 0 6px;
-    }
+user agent stylesheet div {
+    display: block;
+}
+
+.screen .caption {
+    text-transform: uppercase;
+    color: #a1a1a1;
+    background-color: #f8f9fa !important;
+    height: 14px;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 6px;
+    font: 14px/14px Arial, Helvetica, sans-serif;
+}
+
+user agent stylesheet div {
+    display: block;
+}
 /*////////////////////////////////////////////////////////////////////*/
+#hall-scheme-legend {
+    text-align: center;
+    position: relative;
+    top: -12px;
+}
+
+user agent stylesheet div {
+    display: block;
+}
+
+#hall-scheme-legend ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 user agent stylesheet ul {
+    display: block;
     list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+#hall-scheme-legend li {
+    font-size: 9pt;
+    display: inline-block;
 }
 
 user agent stylesheet li {
+    display: list-item;
     text-align: -webkit-match-parent;
+}
+
+#hall-scheme-legend .seat {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+.seat-hover {
+    background-color: #DDFF00;
+    color: #000;
+}
+
+.seat-color2 {
+    background-color: #56E369;
+    outline: none;
 }
 
 .seat {
@@ -165,7 +220,7 @@ user agent stylesheet li {
     -moz-border-radius: 2px;
     border-radius: 2px;
     z-index: 100;
-    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     cursor: default;
     outline: 1px solid #aaa;
@@ -173,46 +228,37 @@ user agent stylesheet li {
     line-height: 16px;
 }
 
-.seat-color2 {
-    background-color: #56E369;
+user agent stylesheet div {
+    display: block;
 }
 
-.seat-hover {
-    background-color: #ddff00;
-    color: #000;
+#hall-scheme-legend .seat {
+    white-space: nowrap;
+}
+/*////////////////////////////////////////////////////////////////////*/
+.wrapper {
+    overflow: hidden;
+    height: 380px;
+    display: block;
+    position: relative;
+    width: 640px;
 }
 
-.seat-occupied {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAQUlEQVQoz2NkQAOHDh36j8y3s7NjROYz4lOMTRMTA4mA9hoYSfU0+eDQoUP/sYUSujgjvuDEFryMxCqmLJRIcRIAl/EkaOA7h4cAAAAASUVORK5CYII=);
+#hall-scheme-container {
+    display: inline-block;
+    width: 620px;
+    height: 380px;
+    overflow: hidden;
+    z-index: 50;
+    margin-left: 10px;
+}
+
+.seat-occupied, #hall-scheme .seat-occupied:hover {
+    background-image: url(https://bilet.vkino.com.ua/i/scheme/seat-occupied.png);
+    background-color: white !important;
     background-repeat: no-repeat;
     color: transparent;
     background-position: center, center;
+    outline: none;
 }
 
-#hall-scheme-legend {
-    text-align: center;
-    position: relative;
-    top: -12px;
-}
-
-    #hall-scheme-legend ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    #hall-scheme-legend li {
-        font-size: 9pt;
-        display: inline-block;
-    }
-
-    #hall-scheme-legend .seat {
-        white-space: nowrap;
-    }
-
-    #hall-scheme-legend .seat {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        border-radius: 2px;
-    }
