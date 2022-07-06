@@ -17,7 +17,7 @@ namespace MyCinema.Services
 
         private static MySqlConnection _connection = new(_connectionStringBuilder.ConnectionString);
 
-        public List<MovieModel> GetAllMovies()
+        public List<MovieModel> GetAllMoviesList()
         {
             List<MovieModel> moviesList = new();
 

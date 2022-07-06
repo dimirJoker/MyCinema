@@ -3,9 +3,9 @@
     public class SeatModel
     {
         public uint Id { get; set; }
-
-        public uint Row { get; set; }
-
-        public uint Status { get; set; }
+        public uint Movie_Id { get; set; }
+        public uint Seats_Row { get; set; }
+        public uint Seat_Number { get; set; }
+        public uint Seat_Status { get; set; }
     }
 }

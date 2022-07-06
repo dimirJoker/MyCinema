@@ -47,7 +47,8 @@
 	<a asp-action="Index">Back to List</a>
 </div>*@
 <div class="text-center">
-	<h1 class="display-4">@Model.Name</h1><small>@Model.Genre, @Model.Duration</small>
+	<h1 class="display-4">@Model.Name</h1>
+	<small>@Model.Genre, @Model.Duration</small>
 	<hr>
 </div>
 <div class="custom-flex-box bg-light" style="padding: 48px 0">
@@ -75,13 +76,13 @@
 						<div class="custom-flex-box-wrap" style="justify-content: center; width: 235px;">
 							@foreach (SeatModel item in ViewBag.SeatsList)
 							{
-								@if (item.Status == 0)
+								@if (item.Seat_Status == 0)
 								{
-									<a id="@item.Id" class="seat seat-color2" href="Home/Buy/@item.Id" title="ряд: @item.Row, место: @item.Id" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">@item.Id</a>
+									<a id="@item.Id" class="seat seat-color2" href="Home/Buy/@item.Id" title="ряд: @item.Seats_Row, место: @item.Seat_Number" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">@item.Seat_Number</a>
 								}
 								else
 								{
-									<div id="@item.Id" class="seat seat-occupied" title="ряд: @item.Row, место: @item.Id" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;"></div>
+									<div id="@item.Id" class="seat seat-occupied" title="ряд: @item.Seats_Row, место: @item.Seat_Number" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;"></div>
 								}
 							}
 							@*<a id="" asp-action="index" class="seat seat-color2" title="70.00 грн" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">3</a>

@@ -18,16 +18,21 @@ namespace MyCinema.Controllers
         public IActionResult Index()
         {
             MoviesTableActions tableAction = new();
-            return View(tableAction.GetAllMovies());
+            return View(tableAction.GetAllMoviesList());
         }
 
         public IActionResult Details(uint id)
         {
             SeatsTableActions seatsTableActions = new();
-            ViewBag.SeatsList = seatsTableActions.GetAllSeatsByMovieId(id);
+            ViewBag.SeatsList = seatsTableActions.GetAllSeatsListByMovieId(id);
 
             MoviesTableActions moviesTableActions = new();
             return View(moviesTableActions.GetMovieById(id));
+        }
+
+        public IActionResult Buy(uint id)
+        {
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -17,13 +17,14 @@ namespace MyCinema.Services
 
         private static MySqlConnection _connection = new(_connectionStringBuilder.ConnectionString);
 
-        public List<SeatModel> GetAllSeatsByMovieId(uint id)
+        public List<SeatModel> GetAllSeatsListByMovieId(uint id)
         {
             List<SeatModel> seatsList = new();
 
             using (_connection)
             {
-                MySqlCommand command = new($"SELECT * FROM movie_{id}_seats_table", _connection);
+                MySqlCommand command = new("SELECT * FROM seatstable WHERE Movie_Id = @id", _connection);
+                command.Parameters.AddWithValue("@id", id);
 
                 try
                 {
@@ -35,8 +36,10 @@ namespace MyCinema.Services
                         seatsList.Add(new SeatModel
                         {
                             Id = (uint)reader[0],
-                            Row = (uint)reader[1],
-                            Status = (uint)reader[2]
+                            Movie_Id = (uint)reader[1],
+                            Seats_Row = (uint)reader[2],
+                            Seat_Number = (uint)reader[3],
+                            Seat_Status = (uint)reader[4]
                         });
                     }
                 }
@@ -46,6 +49,17 @@ namespace MyCinema.Services
             }
 
             return seatsList;
+        }
+
+        public SeatModel BuySeatByIds(uint movieId, uint  seatId)
+        {
+            SeatModel seat = null;
+
+            using (_connection)
+            {
+                MySqlCommand command = new("SELECT * FROM moviestable WHERE Id = @id", _connection);
+            }
+            return seat;
         }
     }
 }
