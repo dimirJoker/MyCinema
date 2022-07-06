@@ -124,7 +124,7 @@ user agent stylesheet div {
     display: block;
 }
 
-#hall-scheme {
+/*#hall-scheme {
     display: inline-block;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -134,7 +134,7 @@ user agent stylesheet div {
     user-select: none;
     margin-top: 4px;
     float: left;
-}
+}*/
 
 .screen {
     text-align: center;
@@ -153,10 +153,6 @@ user agent stylesheet div {
 /*////////////////////////////////////////////////////////////////////*/
 user agent stylesheet ul {
     list-style-type: disc;
-}
-
-user agent stylesheet li {
-    text-align: -webkit-match-parent;
 }
 
 .seat {
@@ -216,3 +212,62 @@ user agent stylesheet li {
         height: 10px;
         border-radius: 2px;
     }
+/*////////////////////////////////////////////////////////////////////*/
+user agent stylesheet button {
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-image: initial;
+}
+
+#hall-scheme-buttons .center {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+#hall-scheme-buttons .purchase-button {
+    background-color: #ff9000;
+    color: #fff;
+}
+
+.button {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: .2s ease-out;
+    background-color: #000;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+    box-shadow: 0 3px 3px 0 rgb(0 0 0 / 14%), 0 1px 7px 0 rgb(0 0 0 / 12%), 0 3px 1px -1px rgb(0 0 0 / 20%);
+    font-size: 13px;
+}

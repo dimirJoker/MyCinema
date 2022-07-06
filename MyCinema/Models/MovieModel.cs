@@ -25,7 +25,7 @@ namespace MyCinema.Models
         [Range(0, float.MaxValue)]
         public float Price { get; set; }
 
-		[DataType(DataType.Text)]
-		public string Genre { get; set; }
-	}
+        [DataType(DataType.Text)]
+        public string Genre { get; set; }
+    }
 }
