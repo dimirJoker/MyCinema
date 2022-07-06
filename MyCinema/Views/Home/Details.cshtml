@@ -58,7 +58,7 @@
 		<strong>Описание:</strong>
 		<p>@Model.Description</p>
 		<div class="custom-flex-box" style="justify-content: center">
-			<div id="hall-scheme">
+			<div id="hall-scheme" style="padding: 30px">
 				<div class="screen">
 					<div class="caption">екран</div>
 				</div>
@@ -70,19 +70,30 @@
 						</li>
 					</ul>
 				</div>
-				<div class="wrapper" style="height: 228.8px;">
-					<div id="hall-scheme-container" style="height: 228.8px; overflow: hidden;">
-						<div style="position: relative; width: 324px; height: 220px; top: 0px;justify-content: center;">
-							<a id="" asp-action="index" class="seat seat-color2" title="70.00 грн" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px;">3</a>
-							<div id="" class="seat seat-hover" title="70.00 грн" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px;">3</div>
-							<div id="" class="seat seat-occupied" title="70.00 грн" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px;">3</div>
+				<div class="wrapper">
+					<div id="hall-scheme-container" style="overflow: hidden;">
+						<div class="custom-flex-box-wrap" style="justify-content: center; width: 235px;">
+							@foreach (SeatModel item in ViewBag.SeatsList)
+							{
+								@if (item.Status == 0)
+								{
+									<a id="@item.Id" class="seat seat-color2" href="Home/Buy/@item.Id" title="ряд: @item.Row, место: @item.Id" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">@item.Id</a>
+								}
+								else
+								{
+									<div id="@item.Id" class="seat seat-occupied" title="ряд: @item.Row, место: @item.Id" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;"></div>
+								}
+							}
+							@*<a id="" asp-action="index" class="seat seat-color2" title="70.00 грн" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">3</a>
+							<div id="" class="seat seat-hover" title="70.00 грн" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">3</div>
+							<div id="" class="seat seat-occupied" title="70.00 грн" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">3</div>*@
 						</div>
 					</div>
 				</div>
-				<div id="hall-scheme-buttons">
+				<div id="hall-scheme-buttons" style="padding: 15px">
 					<div class="center">
 						<div>
-							<button class="button purchase-button">купити квитки</button>
+							<button class="button purchase-button">купить</button>
 						</div>
 					</div>
 				</div>

@@ -109,6 +109,12 @@ img {
     margin: 0 15px;
 }
 
+.custom-flex-box-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 15px;
+}
+
 .custom-flex-item {
     padding: 0 15px;
 }
