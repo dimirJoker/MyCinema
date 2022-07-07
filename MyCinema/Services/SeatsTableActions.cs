@@ -47,7 +47,6 @@ namespace MyCinema.Services
                 {
                 }
             }
-
             return seatsList;
         }
 
@@ -57,7 +56,29 @@ namespace MyCinema.Services
 
             using (_connection)
             {
-                MySqlCommand command = new("SELECT * FROM moviestable WHERE Id = @id", _connection);
+                MySqlCommand command = new("UPDATE seatstable SET Seat_Status = 1 WHERE Id = @id; SELECT * FROM seatstable WHERE Id = @id;", _connection);
+                command.Parameters.AddWithValue("@id", seatId);
+
+                try
+                {
+                    _connection.Open();
+
+                    MySqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        seat = new SeatModel
+                        {
+                            Id = (uint)reader[0],
+                            Movie_Id = (uint)reader[1],
+                            Seats_Row = (uint)reader[2],
+                            Seat_Number = (uint)reader[3],
+                            Seat_Status = (uint)reader[4]
+                        };
+                    }
+                }
+                catch (Exception ex)
+                {
+                }
             }
             return seat;
         }

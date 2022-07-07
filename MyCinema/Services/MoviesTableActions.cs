@@ -48,7 +48,6 @@ namespace MyCinema.Services
                 {
                 }
             }
-
             return moviesList;
         }
 
