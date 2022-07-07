@@ -32,8 +32,5 @@ namespace MyCinema.Models
         [Required]
         [StringLength(50)]
         public string Genre { get; set; }
-
-        [Required]
-        public DateTime Start { get; set; }
     }
 }

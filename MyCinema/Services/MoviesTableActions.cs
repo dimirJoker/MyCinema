@@ -40,8 +40,7 @@ namespace MyCinema.Services
                             Duration = (TimeSpan)reader[3],
                             Thumbnail = (string)reader[4],
                             Price = (float)reader[5],
-                            Genre = (string)reader[6],
-                            Start = (DateTime)reader[7]
+                            Genre = (string)reader[6]
                         });
                     }
                 }
@@ -76,8 +75,7 @@ namespace MyCinema.Services
                             Duration = (TimeSpan)reader[3],
                             Thumbnail = (string)reader[4],
                             Price = (float)reader[5],
-                            Genre = (string)reader[6],
-                            Start = (DateTime)reader[7]
+                            Genre = (string)reader[6]
                         };
                     }
                 }
