@@ -78,16 +78,14 @@
 							{
 								@if (item.Seat_Status == 0)
 								{
-									<a id="@item.Id" class="seat seat-color2" href="/Home/Buy/@item.Id" title="ряд: @item.Seats_Row, место: @item.Seat_Number" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">@item.Seat_Number</a>
+									<a id="@item.Id" class="seat seat-color2" href="/Home/Buy?movieId=@Model.Id&seatId=@item.Id" title="ряд: @item.Seats_Row, место: @item.Seat_Number" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">@item.Seat_Number</a>
 								}
 								else
 								{
 									<div id="@item.Id" class="seat seat-occupied" title="ряд: @item.Seats_Row, место: @item.Seat_Number" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;"></div>
 								}
 							}
-							@*<a id="" asp-action="index" class="seat seat-color2" title="70.00 грн" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">3</a>
-							<div id="" class="seat seat-hover" title="70.00 грн" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">3</div>
-							<div id="" class="seat seat-occupied" title="70.00 грн" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">3</div>*@
+							@*<div id="" class="seat seat-hover" title="70.00 грн" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">3</div>*@
 						</div>
 					</div>
 				</div>
