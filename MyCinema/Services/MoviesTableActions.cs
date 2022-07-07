@@ -23,7 +23,7 @@ namespace MyCinema.Services
 
             using (_connection)
             {
-                MySqlCommand command = new("SELECT * FROM moviestable", _connection);
+                MySqlCommand command = new("SELECT * FROM moviestable ORDER BY Start ASC", _connection);
 
                 try
                 {
@@ -40,7 +40,8 @@ namespace MyCinema.Services
                             Duration = (TimeSpan)reader[3],
                             Thumbnail = (string)reader[4],
                             Price = (float)reader[5],
-                            Genre = (string)reader[6]
+                            Genre = (string)reader[6],
+                            Start = (DateTime)reader[7]
                         });
                     }
                 }
@@ -75,7 +76,8 @@ namespace MyCinema.Services
                             Duration = (TimeSpan)reader[3],
                             Thumbnail = (string)reader[4],
                             Price = (float)reader[5],
-                            Genre = (string)reader[6]
+                            Genre = (string)reader[6],
+                            Start = (DateTime)reader[7]
                         };
                     }
                 }

@@ -5,6 +5,7 @@ namespace MyCinema.Models
 {
     public class MovieModel
     {
+        [Required]
         [MaxLength(10)]
         public uint Id { get; set; }
 
@@ -12,20 +13,27 @@ namespace MyCinema.Models
         [StringLength(50)]
         public string Name { get; set; }
 
-        [DataType(DataType.Text)]
+        [Required]
         public string Description { get; set; }
 
+        [Required]
         [DataType(DataType.Duration)]
         public TimeSpan Duration { get; set; }
 
+        [Required]
         [DataType(DataType.ImageUrl)]
         public string Thumbnail { get; set; }
 
+        [Required]
         [DataType(DataType.Currency)]
         [Range(0, float.MaxValue)]
         public float Price { get; set; }
 
-        [DataType(DataType.Text)]
+        [Required]
+        [StringLength(50)]
         public string Genre { get; set; }
+
+        [Required]
+        public DateTime Start { get; set; }
     }
 }
