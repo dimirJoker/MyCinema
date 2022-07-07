@@ -30,10 +30,10 @@ namespace MyCinema.Controllers
             return View(moviesTableActions.GetMovieById(id));
         }
 
-        public IActionResult Buy(uint movieId, uint seatId)
+        public IActionResult Buy(uint id)
         {
             SeatsTableActions seatsTableActions = new();
-            return View(seatsTableActions.BuySeatByIds(movieId,seatId));
+            return View(seatsTableActions.BuySeatById(id));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

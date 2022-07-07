@@ -50,14 +50,14 @@ namespace MyCinema.Services
             return seatsList;
         }
 
-        public SeatModel BuySeatByIds(uint movieId, uint  seatId)
+        public SeatModel BuySeatById(uint id)
         {
             SeatModel seat = null;
 
             using (_connection)
             {
                 MySqlCommand command = new("UPDATE seatstable SET Seat_Status = 1 WHERE Id = @id; SELECT * FROM seatstable WHERE Id = @id;", _connection);
-                command.Parameters.AddWithValue("@id", seatId);
+                command.Parameters.AddWithValue("@id", id);
 
                 try
                 {

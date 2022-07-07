@@ -78,7 +78,7 @@
 							{
 								@if (item.Seat_Status == 0)
 								{
-									<a id="@item.Id" class="seat seat-color2" href="/Home/Buy?movieId=@Model.Id&seatId=@item.Id" title="ряд: @item.Seats_Row, место: @item.Seat_Number" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">@item.Seat_Number</a>
+									<a id="@item.Id" class="seat seat-color2" href="/Home/Buy/@item.Id" title="ряд: @item.Seats_Row, место: @item.Seat_Number" style="font-size: 11px; position: relative; width: 16px; height: 16px; line-height: 16px; margin:1px;">@item.Seat_Number</a>
 								}
 								else
 								{
