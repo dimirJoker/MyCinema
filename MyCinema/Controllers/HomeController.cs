@@ -30,7 +30,7 @@ namespace MyCinema.Controllers
             return View(moviesTableActions.GetMovieById(id));
         }
 
-        public IActionResult Buy(uint movieId,uint seatId)
+        public IActionResult Buy(uint movieId, uint seatId)
         {
             MoviesTableActions moviesTableActions = new();
             ViewBag.Movie = moviesTableActions.GetMovieById(movieId);

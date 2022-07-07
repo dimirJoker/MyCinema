@@ -37,7 +37,7 @@ namespace MyCinema.Services
                         {
                             Id = (uint)reader[0],
                             Movie_Id = (uint)reader[1],
-                            Seats_Row = (uint)reader[2],
+                            Seat_Row = (uint)reader[2],
                             Seat_Number = (uint)reader[3],
                             Seat_Status = (uint)reader[4]
                         });
@@ -70,7 +70,7 @@ namespace MyCinema.Services
                         {
                             Id = (uint)reader[0],
                             Movie_Id = (uint)reader[1],
-                            Seats_Row = (uint)reader[2],
+                            Seat_Row = (uint)reader[2],
                             Seat_Number = (uint)reader[3],
                             Seat_Status = (uint)reader[4]
                         };

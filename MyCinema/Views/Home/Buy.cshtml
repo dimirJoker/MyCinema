@@ -1,42 +1,78 @@
 ﻿@model MyCinema.Models.SeatModel
 
-<div>
-    <h4>Билет</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Movie_Id)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Movie_Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Seats_Row)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Seats_Row)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Seat_Number)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Seat_Number)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Seat_Status)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Seat_Status)
-        </dd>
-    </dl>
+@*<div> FOR DEBUGGING
+	<h4>@Model.Name</h4>
+	<hr />
+	<dl class="row">
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Id)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Id)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Description)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Description)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Duration)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Duration)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Thumbnail)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Thumbnail)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Price)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Price)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Genre)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Genre)
+		</dd>
+	</dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
+	@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+	<a asp-action="Index">Back to List</a>
+</div>*@
+<div class="text-center">
+	<h1 class="display-4">@ViewBag.Movie.Name</h1>
+	<small>Жанр: @ViewBag.Movie.Genre; Продолжительность: @ViewBag.Movie.Duration; Сеанс: @ViewBag.Movie.Start</small>
+	<hr>
+</div>
+<div class="custom-flex-box bg-light" style="padding: 48px 0">
+	<div class="custom-flex-item">
+		<img class="custom-flex-item-img" src="@ViewBag.Movie.Thumbnail" alt="@ViewBag.Movie.Name">
+	</div>
+	<div class="custom-flex-item">
+		<strong>Описание:</strong>
+		<p>@ViewBag.Movie.Description</p>
+		<div class="custom-flex-box" style="justify-content: center; flex-direction: column; align-items: center;">
+			<div>
+				<h2 class="display-4">Билет</h2>
+				<hr>
+			</div>
+			<div>
+				<strong>Сеанс: </strong><span>@ViewBag.Movie.Start</span>
+			</div>
+			<div>
+				<strong>Ряд: </strong><span>@Model.Seat_Row</span>
+				<strong>Место: </strong><span>@Model.Seat_Number</span>
+			</div>
+			<div>
+				<img src="https://chart.googleapis.com/chart?cht=qr&chs=210x210&chl=@ViewBag.Movie.Name@ViewBag.Movie.Start@Model.Seat_Row@Model.Seat_Number">
+			</div>
+		</div>
+	</div>
 </div>
